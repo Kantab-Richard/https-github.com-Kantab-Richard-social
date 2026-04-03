@@ -11,10 +11,1037 @@ View your app in AI Studio: https://ai.studio/apps/d5c9b89b-ee39-4c6d-9834-b9b0f
 ## Run Locally
 
 **Prerequisites:**  Node.js
-
+**Optional:** [Python](https://www.python.org/downloads/) (Required by `youtube-dl-exec` for local video processing).
 
 1. Install dependencies:
-   `npm install`
+   If Python is not installed, run the following to skip the check:
+   - **PowerShell:** `$env:YOUTUBE_DL_SKIP_PYTHON_CHECK=1; npm install`
+   - **CMD:** `set YOUTUBE_DL_SKIP_PYTHON_CHECK=1 && npm install`
+   - **Linux/macOS:** `YOUTUBE_DL_SKIP_PYTHON_CHECK=1 npm install`
+
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+│   │   └───node_modules
+│   │       ├───.bin
+│   │       └───semver
+│   │           ├───bin
+│   │           ├───classes
+│   │           ├───functions
+│   │           ├───internal
+│   │           └───ranges
+│   ├───send
+│   │   └───node_modules
+│   │       └───debug
+│   │           ├───node_modules
+│   │           │   └───ms
+│   │           └───src
+│   ├───sequelize
+│   │   ├───lib
+│   │   │   ├───associations
+│   │   │   ├───dialects
+│   │   │   │   ├───abstract
+│   │   │   │   │   └───query-generator
+│   │   │   │   ├───db2
+│   │   │   │   ├───mariadb
+│   │   │   │   ├───mssql
+│   │   │   │   ├───mysql
+│   │   │   │   ├───oracle
+│   │   │   │   ├───postgres
+│   │   │   │   ├───snowflake
+│   │   │   │   └───sqlite
+│   │   │   ├───errors
+│   │   │   │   ├───connection
+│   │   │   │   ├───database
+│   │   │   │   └───validation
+│   │   │   ├───generic
+│   │   │   └───utils
+│   │   ├───node_modules
+│   │   │   ├───.bin
+│   │   │   └───semver
+│   │   │       ├───bin
+│   │   │       ├───classes
+│   │   │       ├───functions
+│   │   │       ├───internal
+│   │   │       └───ranges
+│   │   └───types
+│   │       ├───associations
+│   │       ├───dialects
+│   │       │   ├───abstract
+│   │       │   ├───mssql
+│   │       │   └───sqlite
+│   │       ├───errors
+│   │       │   ├───connection
+│   │       │   ├───database
+│   │       │   └───validation
+│   │       ├───generic
+│   │       └───utils
+│   ├───sequelize-pool
+│   │   ├───lib
+│   │   └───types
+│   ├───serve-static
+│   ├───set-cookie-parser
+│   │   └───lib
+│   ├───setprototypeof
+│   │   └───test
+│   ├───shebang-command
+│   ├───shebang-regex
+│   ├───side-channel
+│   │   ├───.github
+│   │   └───test
+│   ├───side-channel-list
+│   │   ├───.github
+│   │   └───test
+│   ├───side-channel-map
+│   │   ├───.github
+│   │   └───test
+│   ├───side-channel-weakmap
+│   │   ├───.github
+│   │   └───test
+│   ├───signal-exit
+│   │   └───dist
+│   │       ├───cjs
+│   │       └───mjs
+│   ├───simple-concat
+│   │   └───test
+│   ├───simple-get
+│   │   └───.github
+│   │       └───workflows
+│   ├───smart-buffer
+│   │   ├───build
+│   │   ├───docs
+│   │   └───typings
+│   ├───socks
+│   │   ├───build
+│   │   │   ├───client
+│   │   │   └───common
+│   │   ├───docs
+│   │   │   └───examples
+│   │   │       ├───javascript
+│   │   │       └───typescript
+│   │   └───typings
+│   │       ├───client
+│   │       └───common
+│   ├───socks-proxy-agent
+│   │   └───dist
+│   ├───source-map-js
+│   │   └───lib
+│   ├───sqlite3
+│   │   ├───build
+│   │   │   └───Release
+│   │   ├───deps
+│   │   ├───lib
+│   │   └───src
+│   ├───ssri
+│   │   └───lib
+│   ├───statuses
+│   ├───streamsearch
+│   │   ├───.github
+│   │   │   └───workflows
+│   │   ├───lib
+│   │   └───test
+│   ├───string_decoder
+│   │   └───lib
+│   ├───strip-final-newline
+│   ├───strip-json-comments
+│   ├───super-regex
+│   ├───tailwind-merge
+│   │   ├───dist
+│   │   │   └───es5
+│   │   └───src
+│   │       └───lib
+│   ├───tailwindcss
+│   │   └───dist
+│   ├───tapable
+│   │   └───lib
+│   ├───tar
+│   │   ├───dist
+│   │   │   ├───commonjs
+│   │   │   └───esm
+│   │   └───node_modules
+│   │       └───yallist
+│   │           └───dist
+│   │               ├───commonjs
+│   │               └───esm
+│   ├───tar-fs
+│   │   ├───node_modules
+│   │   │   └───chownr
+│   │   └───test
+│   │       └───fixtures
+│   │           ├───a
+│   │           ├───b
+│   │           │   └───a
+│   │           ├───d
+│   │           │   ├───sub-dir
+│   │           │   └───sub-files
+│   │           └───e
+│   │               └───directory
+│   ├───tar-stream
+│   ├───time-span
+│   ├───tinyglobby
+│   │   └───dist
+│   ├───tinyspawn
+│   │   └───src
+│   ├───toidentifier
+│   ├───toposort-class
+│   │   ├───benchmark
+│   │   │   └───0.3.1
+│   │   └───build
+│   ├───tslib
+│   │   └───modules
+│   ├───tsx
+│   │   └───dist
+│   │       ├───cjs
+│   │       │   └───api
+│   │       └───esm
+│   │           └───api
+│   ├───tunnel-agent
+│   ├───type-fest
+│   │   └───source
+│   │       └───internal
+│   ├───type-is
+│   ├───typedarray
+│   │   ├───example
+│   │   └───test
+│   │       └───server
+│   ├───typescript
+│   │   ├───bin
+│   │   └───lib
+│   │       ├───cs
+│   │       ├───de
+│   │       ├───es
+│   │       ├───fr
+│   │       ├───it
+│   │       ├───ja
+│   │       ├───ko
+│   │       ├───pl
+│   │       ├───pt-br
+│   │       ├───ru
+│   │       ├───tr
+│   │       ├───zh-cn
+│   │       └───zh-tw
+│   ├───undici-types
+│   ├───unpipe
+│   ├───update-browserslist-db
+│   ├───util-deprecate
+│   ├───utils-merge
+│   ├───uuid
+│   │   └───dist
+│   │       ├───bin
+│   │       ├───esm-browser
+│   │       ├───esm-node
+│   │       └───umd
+│   ├───validator
+│   │   ├───es
+│   │   │   └───lib
+│   │   │       └───util
+│   │   └───lib
+│   │       └───util
+│   ├───vary
+│   ├───vite
+│   │   ├───bin
+│   │   ├───dist
+│   │   │   ├───client
+│   │   │   ├───node
+│   │   │   │   └───chunks
+│   │   │   └───node-cjs
+│   │   ├───misc
+│   │   ├───node_modules
+│   │   │   ├───.bin
+│   │   │   ├───@esbuild
+│   │   │   │   └───win32-x64
+│   │   │   └───esbuild
+│   │   │       ├───bin
+│   │   │       └───lib
+│   │   └───types
+│   │       └───internal
+│   ├───web-worker
+│   │   ├───dist
+│   │   │   ├───browser
+│   │   │   └───node
+│   │   ├───src
+│   │   │   ├───browser
+│   │   │   └───node
+│   │   └───types
+│   ├───which
+│   │   └───bin
+│   ├───wkx
+│   │   ├───dist
+│   │   └───lib
+│   ├───wrappy
+│   ├───yallist
+│   └───youtube-dl-exec
+│       ├───bin
+│       ├───scripts
+│       └───src
+├───server
+│   ├───controllers
+│   ├───middleware
+│   ├───models
+│   ├───node_modules
+│   │   ├───.bin
+│   │   ├───@distube
+│   │   │   └───ytdl-core
+│   │   │       ├───lib
+│   │   │       └───typings
+│   │   ├───@esbuild
+│   │   │   └───win32-x64
+│   │   ├───@google
+│   │   │   └───generative-ai
+│   │   │       ├───dist
+│   │   │       │   ├───scripts
+│   │   │       │   ├───server
+│   │   │       │   │   ├───scripts
+│   │   │       │   │   ├───src
+│   │   │       │   │   │   ├───methods
+│   │   │       │   │   │   ├───models
+│   │   │       │   │   │   ├───requests
+│   │   │       │   │   │   └───server
+│   │   │       │   │   └───types
+│   │   │       │   │       └───server
+│   │   │       │   ├───src
+│   │   │       │   │   ├───methods
+│   │   │       │   │   ├───models
+│   │   │       │   │   ├───requests
+│   │   │       │   │   └───server
+│   │   │       │   └───types
+│   │   │       │       └───server
+│   │   │       └───server
+│   │   ├───@ioredis
+│   │   │   └───commands
+│   │   │       └───built
+│   │   ├───@kikobeats
+│   │   │   └───time-span
+│   │   │       └───src
+│   │   ├───@msgpackr-extract
+│   │   │   └───msgpackr-extract-win32-x64
+│   │   ├───@types
+│   │   │   ├───body-parser
+│   │   │   ├───connect
+│   │   │   ├───cors
+│   │   │   ├───debug
+│   │   │   ├───express
+│   │   │   ├───express-serve-static-core
+│   │   │   ├───http-errors
+│   │   │   ├───jsonwebtoken
+│   │   │   ├───ms
+│   │   │   ├───node
+│   │   │   │   ├───assert
+│   │   │   │   ├───compatibility
+│   │   │   │   ├───dns
+│   │   │   │   ├───fs
+│   │   │   │   ├───inspector
+│   │   │   │   ├───path
+│   │   │   │   ├───readline
+│   │   │   │   ├───stream
+│   │   │   │   ├───test
+│   │   │   │   ├───timers
+│   │   │   │   ├───ts5.6
+│   │   │   │   │   └───compatibility
+│   │   │   │   ├───ts5.7
+│   │   │   │   │   └───compatibility
+│   │   │   │   ├───util
+│   │   │   │   └───web-globals
+│   │   │   ├───qs
+│   │   │   ├───range-parser
+│   │   │   ├───send
+│   │   │   ├───serve-static
+│   │   │   └───validator
+│   │   │       ├───es
+│   │   │       │   └───lib
+│   │   │       └───lib
+│   │   ├───accepts
+│   │   ├───agent-base
+│   │   │   └───dist
+│   │   ├───anymatch
+│   │   ├───asynckit
+│   │   │   └───lib
+│   │   ├───axios
+│   │   │   ├───dist
+│   │   │   │   ├───browser
+│   │   │   │   ├───esm
+│   │   │   │   └───node
+│   │   │   └───lib
+│   │   │       ├───adapters
+│   │   │       ├───cancel
+│   │   │       ├───core
+│   │   │       ├───defaults
+│   │   │       ├───env
+│   │   │       │   └───classes
+│   │   │       ├───helpers
+│   │   │       └───platform
+│   │   │           ├───browser
+│   │   │           │   └───classes
+│   │   │           ├───common
+│   │   │           └───node
+│   │   │               └───classes
+│   │   ├───balanced-match
+│   │   │   └───dist
+│   │   │       ├───commonjs
+│   │   │       └───esm
+│   │   ├───binary-extensions
+│   │   ├───binary-version
+│   │   ├───binary-version-check
+│   │   ├───body-parser
+│   │   │   └───lib
+│   │   │       └───types
+│   │   ├───brace-expansion
+│   │   │   └───dist
+│   │   │       ├───commonjs
+│   │   │       └───esm
+│   │   ├───braces
+│   │   │   └───lib
+│   │   ├───bullmq
+│   │   │   └───dist
+│   │   │       ├───cjs
+│   │   │       │   ├───classes
+│   │   │       │   │   └───errors
+│   │   │       │   ├───commands
+│   │   │       │   │   └───includes
+│   │   │       │   ├───enums
+│   │   │       │   ├───interfaces
+│   │   │       │   ├───scripts
+│   │   │       │   ├───types
+│   │   │       │   └───utils
+│   │   │       └───esm
+│   │   │           ├───classes
+│   │   │           │   └───errors
+│   │   │           ├───commands
+│   │   │           │   └───includes
+│   │   │           ├───enums
+│   │   │           ├───interfaces
+│   │   │           ├───scripts
+│   │   │           ├───types
+│   │   │           └───utils
+│   │   ├───bytes
+│   │   ├───call-bind-apply-helpers
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───call-bound
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───chokidar
+│   │   │   ├───lib
+│   │   │   └───types
+│   │   ├───cluster-key-slot
+│   │   │   └───lib
+│   │   ├───combined-stream
+│   │   │   └───lib
+│   │   ├───concat-map
+│   │   │   ├───example
+│   │   │   └───test
+│   │   ├───content-disposition
+│   │   ├───content-type
+│   │   ├───convert-hrtime
+│   │   ├───cookie
+│   │   ├───cookie-signature
+│   │   ├───cors
+│   │   │   └───lib
+│   │   ├───cron-parser
+│   │   │   ├───lib
+│   │   │   └───types
+│   │   │       └───ts3
+│   │   ├───cross-spawn
+│   │   │   └───lib
+│   │   │       └───util
+│   │   ├───dargs
+│   │   ├───debug
+│   │   │   └───src
+│   │   ├───debug-logfmt
+│   │   │   └───src
+│   │   ├───delayed-stream
+│   │   │   └───lib
+│   │   ├───denque
+│   │   ├───depd
+│   │   │   └───lib
+│   │   │       └───browser
+│   │   ├───detect-libc
+│   │   │   └───lib
+│   │   ├───dotenv
+│   │   │   └───lib
+│   │   ├───dottie
+│   │   ├───dunder-proto
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───ee-first
+│   │   ├───encodeurl
+│   │   ├───es-define-property
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───es-errors
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───es-object-atoms
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───es-set-tostringtag
+│   │   │   └───test
+│   │   ├───esbuild
+│   │   │   ├───bin
+│   │   │   └───lib
+│   │   ├───escape-html
+│   │   ├───etag
+│   │   ├───execa
+│   │   │   └───lib
+│   │   ├───express
+│   │   │   └───lib
+│   │   ├───fill-range
+│   │   ├───finalhandler
+│   │   ├───find-versions
+│   │   ├───follow-redirects
+│   │   ├───form-data
+│   │   │   ├───lib
+│   │   │   └───node_modules
+│   │   │       ├───mime-db
+│   │   │       └───mime-types
+│   │   ├───forwarded
+│   │   ├───fresh
+│   │   ├───fs-extra
+│   │   │   └───lib
+│   │   │       ├───copy
+│   │   │       ├───empty
+│   │   │       ├───ensure
+│   │   │       ├───fs
+│   │   │       ├───json
+│   │   │       ├───mkdirs
+│   │   │       ├───move
+│   │   │       ├───output-file
+│   │   │       ├───path-exists
+│   │   │       ├───remove
+│   │   │       └───util
+│   │   ├───fs.realpath
+│   │   ├───function-bind
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───function-timeout
+│   │   ├───get-intrinsic
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───get-proto
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───get-stream
+│   │   │   └───source
+│   │   ├───get-tsconfig
+│   │   │   └───dist
+│   │   ├───glob
+│   │   │   └───node_modules
+│   │   │       ├───balanced-match
+│   │   │       │   └───.github
+│   │   │       ├───brace-expansion
+│   │   │       └───minimatch
+│   │   ├───glob-parent
+│   │   ├───gopd
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───graceful-fs
+│   │   ├───has-flag
+│   │   ├───has-symbols
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   │       └───shams
+│   │   ├───has-tostringtag
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   │       └───shams
+│   │   ├───hasown
+│   │   │   └───.github
+│   │   ├───http-cookie-agent
+│   │   │   ├───dist
+│   │   │   │   ├───http
+│   │   │   │   ├───types
+│   │   │   │   ├───undici
+│   │   │   │   │   └───v6
+│   │   │   │   └───utils
+│   │   │   ├───http
+│   │   │   └───undici
+│   │   │       └───v6
+│   │   ├───http-errors
+│   │   ├───https-proxy-agent
+│   │   │   └───dist
+│   │   ├───human-signals
+│   │   │   └───build
+│   │   │       └───src
+│   │   ├───iconv-lite
+│   │   │   ├───encodings
+│   │   │   │   └───tables
+│   │   │   ├───lib
+│   │   │   │   └───helpers
+│   │   │   └───types
+│   │   ├───ignore-by-default
+│   │   ├───inflection
+│   │   │   ├───.vscode
+│   │   │   └───lib
+│   │   ├───inflight
+│   │   ├───inherits
+│   │   ├───ioredis
+│   │   │   └───built
+│   │   │       ├───cluster
+│   │   │       ├───connectors
+│   │   │       │   └───SentinelConnector
+│   │   │       ├───constants
+│   │   │       ├───errors
+│   │   │       ├───redis
+│   │   │       └───utils
+│   │   ├───ipaddr.js
+│   │   │   └───lib
+│   │   ├───is-binary-path
+│   │   ├───is-extglob
+│   │   ├───is-glob
+│   │   ├───is-number
+│   │   ├───is-promise
+│   │   ├───is-stream
+│   │   ├───is-unix
+│   │   ├───isexe
+│   │   │   └───test
+│   │   ├───jsonfile
+│   │   ├───lodash
+│   │   │   └───fp
+│   │   ├───lodash.defaults
+│   │   ├───lodash.isarguments
+│   │   ├───luxon
+│   │   │   ├───build
+│   │   │   │   ├───amd
+│   │   │   │   ├───cjs-browser
+│   │   │   │   ├───es6
+│   │   │   │   ├───global
+│   │   │   │   └───node
+│   │   │   └───src
+│   │   │       ├───impl
+│   │   │       └───zones
+│   │   ├───m3u8stream
+│   │   │   └───dist
+│   │   ├───make-asynchronous
+│   │   ├───math-intrinsics
+│   │   │   ├───.github
+│   │   │   ├───constants
+│   │   │   └───test
+│   │   ├───media-typer
+│   │   ├───merge-descriptors
+│   │   ├───merge-stream
+│   │   ├───mime-db
+│   │   ├───mime-types
+│   │   ├───mimic-fn
+│   │   ├───miniget
+│   │   │   └───dist
+│   │   ├───minimatch
+│   │   │   └───dist
+│   │   │       ├───commonjs
+│   │   │       └───esm
+│   │   ├───moment
+│   │   │   ├───dist
+│   │   │   │   └───locale
+│   │   │   ├───locale
+│   │   │   ├───min
+│   │   │   ├───src
+│   │   │   │   ├───lib
+│   │   │   │   │   ├───create
+│   │   │   │   │   ├───duration
+│   │   │   │   │   ├───format
+│   │   │   │   │   ├───locale
+│   │   │   │   │   ├───moment
+│   │   │   │   │   ├───parse
+│   │   │   │   │   ├───units
+│   │   │   │   │   └───utils
+│   │   │   │   └───locale
+│   │   │   └───ts3.1-typings
+│   │   ├───moment-timezone
+│   │   │   ├───builds
+│   │   │   └───data
+│   │   │       ├───meta
+│   │   │       └───packed
+│   │   ├───ms
+│   │   ├───msgpackr
+│   │   │   └───dist
+│   │   ├───msgpackr-extract
+│   │   │   ├───bin
+│   │   │   └───src
+│   │   ├───negotiator
+│   │   │   └───lib
+│   │   ├───node-abort-controller
+│   │   │   ├───.github
+│   │   │   │   └───workflows
+│   │   │   └───__tests__
+│   │   ├───node-gyp-build-optional-packages
+│   │   ├───nodemon
+│   │   │   ├───bin
+│   │   │   ├───doc
+│   │   │   │   └───cli
+│   │   │   └───lib
+│   │   │       ├───cli
+│   │   │       ├───config
+│   │   │       ├───help
+│   │   │       ├───monitor
+│   │   │       ├───rules
+│   │   │       └───utils
+│   │   ├───normalize-path
+│   │   ├───npm-run-path
+│   │   │   └───node_modules
+│   │   │       └───path-key
+│   │   ├───null-prototype-object
+│   │   │   └───src
+│   │   ├───object-assign
+│   │   ├───object-inspect
+│   │   │   ├───.github
+│   │   │   ├───example
+│   │   │   └───test
+│   │   │       └───browser
+│   │   ├───on-finished
+│   │   ├───once
+│   │   ├───onetime
+│   │   ├───p-event
+│   │   ├───p-timeout
+│   │   ├───parse-ms
+│   │   ├───parseurl
+│   │   ├───path-is-absolute
+│   │   ├───path-key
+│   │   ├───path-to-regexp
+│   │   │   └───dist
+│   │   ├───pg
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   │       ├───crypto
+│   │   │       └───native
+│   │   ├───pg-cloudflare
+│   │   │   ├───dist
+│   │   │   ├───esm
+│   │   │   └───src
+│   │   ├───pg-connection-string
+│   │   │   └───esm
+│   │   ├───pg-hstore
+│   │   │   ├───lib
+│   │   │   └───test
+│   │   ├───pg-int8
+│   │   ├───pg-pool
+│   │   │   └───esm
+│   │   ├───pg-protocol
+│   │   │   ├───dist
+│   │   │   ├───esm
+│   │   │   └───src
+│   │   │       ├───testing
+│   │   │       └───types
+│   │   ├───pg-types
+│   │   │   ├───lib
+│   │   │   └───test
+│   │   ├───pgpass
+│   │   │   └───lib
+│   │   ├───picomatch
+│   │   │   └───lib
+│   │   ├───postgres-array
+│   │   ├───postgres-bytea
+│   │   ├───postgres-date
+│   │   ├───postgres-interval
+│   │   ├───pretty-ms
+│   │   ├───proxy-addr
+│   │   ├───proxy-from-env
+│   │   ├───pstree.remy
+│   │   │   ├───lib
+│   │   │   └───tests
+│   │   │       └───fixtures
+│   │   ├───qs
+│   │   │   ├───.github
+│   │   │   ├───dist
+│   │   │   ├───lib
+│   │   │   └───test
+│   │   ├───range-parser
+│   │   ├───raw-body
+│   │   ├───readdirp
+│   │   ├───redis-errors
+│   │   │   └───lib
+│   │   ├───redis-parser
+│   │   │   └───lib
+│   │   ├───reflect-metadata
+│   │   ├───resolve-pkg-maps
+│   │   │   └───dist
+│   │   ├───retry-as-promised
+│   │   │   ├───dist
+│   │   │   └───test
+│   │   ├───router
+│   │   │   └───lib
+│   │   ├───safer-buffer
+│   │   ├───sax
+│   │   │   └───lib
+│   │   ├───semver
+│   │   │   ├───bin
+│   │   │   ├───classes
+│   │   │   ├───functions
+│   │   │   ├───internal
+│   │   │   └───ranges
+│   │   ├───semver-regex
+│   │   ├───semver-truncate
+│   │   ├───send
+│   │   ├───sequelize
+│   │   │   ├───lib
+│   │   │   │   ├───associations
+│   │   │   │   ├───dialects
+│   │   │   │   │   ├───abstract
+│   │   │   │   │   │   └───query-generator
+│   │   │   │   │   ├───db2
+│   │   │   │   │   ├───mariadb
+│   │   │   │   │   ├───mssql
+│   │   │   │   │   ├───mysql
+│   │   │   │   │   ├───oracle
+│   │   │   │   │   ├───postgres
+│   │   │   │   │   ├───snowflake
+│   │   │   │   │   └───sqlite
+│   │   │   │   ├───errors
+│   │   │   │   │   ├───connection
+│   │   │   │   │   ├───database
+│   │   │   │   │   └───validation
+│   │   │   │   ├───generic
+│   │   │   │   └───utils
+│   │   │   ├───node_modules
+│   │   │   │   ├───.bin
+│   │   │   │   └───uuid
+│   │   │   │       └───dist
+│   │   │   │           ├───bin
+│   │   │   │           ├───esm-browser
+│   │   │   │           ├───esm-node
+│   │   │   │           └───umd
+│   │   │   └───types
+│   │   │       ├───associations
+│   │   │       ├───dialects
+│   │   │       │   ├───abstract
+│   │   │       │   ├───mssql
+│   │   │       │   └───sqlite
+│   │   │       ├───errors
+│   │   │       │   ├───connection
+│   │   │       │   ├───database
+│   │   │       │   └───validation
+│   │   │       ├───generic
+│   │   │       └───utils
+│   │   ├───sequelize-pool
+│   │   │   ├───lib
+│   │   │   └───types
+│   │   ├───sequelize-typescript
+│   │   │   ├───.github
+│   │   │   │   └───workflows
+│   │   │   ├───.husky
+│   │   │   └───dist
+│   │   │       ├───associations
+│   │   │       │   ├───alias-inference
+│   │   │       │   ├───belongs-to
+│   │   │       │   ├───belongs-to-many
+│   │   │       │   ├───foreign-key
+│   │   │       │   ├───has
+│   │   │       │   ├───shared
+│   │   │       │   └───through
+│   │   │       ├───browser
+│   │   │       ├───hooks
+│   │   │       │   ├───bulk
+│   │   │       │   │   ├───after
+│   │   │       │   │   └───before
+│   │   │       │   ├───shared
+│   │   │       │   └───single
+│   │   │       │       ├───after
+│   │   │       │       └───before
+│   │   │       ├───model
+│   │   │       │   ├───column
+│   │   │       │   │   ├───column-options
+│   │   │       │   │   ├───primary-key
+│   │   │       │   │   └───timestamps
+│   │   │       │   ├───index
+│   │   │       │   ├───model
+│   │   │       │   │   └───association
+│   │   │       │   ├───shared
+│   │   │       │   └───table
+│   │   │       ├───scopes
+│   │   │       ├───sequelize
+│   │   │       │   ├───data-type
+│   │   │       │   ├───repository
+│   │   │       │   ├───sequelize
+│   │   │       │   └───validation-only
+│   │   │       ├───shared
+│   │   │       └───validation
+│   │   ├───serve-static
+│   │   ├───setprototypeof
+│   │   │   └───test
+│   │   ├───shebang-command
+│   │   ├───shebang-regex
+│   │   ├───side-channel
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───side-channel-list
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───side-channel-map
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───side-channel-weakmap
+│   │   │   ├───.github
+│   │   │   └───test
+│   │   ├───signal-exit
+│   │   │   └───dist
+│   │   │       ├───cjs
+│   │   │       └───mjs
+│   │   ├───simple-update-notifier
+│   │   │   ├───build
+│   │   │   └───src
+│   │   ├───split2
+│   │   ├───standard-as-callback
+│   │   │   └───built
+│   │   ├───statuses
+│   │   ├───strip-final-newline
+│   │   ├───super-regex
+│   │   ├───supports-color
+│   │   ├───time-span
+│   │   ├───tinyspawn
+│   │   │   └───src
+│   │   ├───tldts
+│   │   │   ├───bin
+│   │   │   ├───dist
+│   │   │   │   ├───cjs
+│   │   │   │   │   └───src
+│   │   │   │   │       └───data
+│   │   │   │   ├───es6
+│   │   │   │   │   └───src
+│   │   │   │   │       └───data
+│   │   │   │   └───types
+│   │   │   │       └───src
+│   │   │   │           └───data
+│   │   │   └───src
+│   │   │       └───data
+│   │   ├───tldts-core
+│   │   │   ├───dist
+│   │   │   │   ├───cjs
+│   │   │   │   │   └───src
+│   │   │   │   │       └───lookup
+│   │   │   │   ├───es6
+│   │   │   │   │   └───src
+│   │   │   │   │       └───lookup
+│   │   │   │   └───types
+│   │   │   │       └───src
+│   │   │   │           └───lookup
+│   │   │   └───src
+│   │   │       └───lookup
+│   │   ├───to-regex-range
+│   │   ├───toidentifier
+│   │   ├───toposort-class
+│   │   │   ├───benchmark
+│   │   │   │   └───0.3.1
+│   │   │   └───build
+│   │   ├───touch
+│   │   │   └───bin
+│   │   ├───tough-cookie
+│   │   │   └───dist
+│   │   │       └───cookie
+│   │   ├───tslib
+│   │   │   └───modules
+│   │   ├───tsx
+│   │   │   └───dist
+│   │   │       ├───cjs
+│   │   │       │   └───api
+│   │   │       └───esm
+│   │   │           └───api
+│   │   ├───type-fest
+│   │   │   └───source
+│   │   │       └───internal
+│   │   ├───type-is
+│   │   ├───typescript
+│   │   │   ├───bin
+│   │   │   └───lib
+│   │   │       ├───cs
+│   │   │       ├───de
+│   │   │       ├───es
+│   │   │       ├───fr
+│   │   │       ├───it
+│   │   │       ├───ja
+│   │   │       ├───ko
+│   │   │       ├───pl
+│   │   │       ├───pt-br
+│   │   │       ├───ru
+│   │   │       ├───tr
+│   │   │       ├───zh-cn
+│   │   │       └───zh-tw
+│   │   ├───undefsafe
+│   │   │   ├───.github
+│   │   │   │   └───workflows
+│   │   │   └───lib
+│   │   ├───underscore
+│   │   │   ├───amd
+│   │   │   ├───cjs
+│   │   │   └───modules
+│   │   ├───undici
+│   │   │   ├───docs
+│   │   │   │   └───docs
+│   │   │   │       ├───api
+│   │   │   │       └───best-practices
+│   │   │   ├───lib
+│   │   │   │   ├───api
+│   │   │   │   ├───cache
+│   │   │   │   ├───core
+│   │   │   │   ├───dispatcher
+│   │   │   │   ├───encoding
+│   │   │   │   ├───handler
+│   │   │   │   ├───interceptor
+│   │   │   │   ├───llhttp
+│   │   │   │   ├───mock
+│   │   │   │   ├───util
+│   │   │   │   └───web
+│   │   │   │       ├───cache
+│   │   │   │       ├───cookies
+│   │   │   │       ├───eventsource
+│   │   │   │       ├───fetch
+│   │   │   │       ├───infra
+│   │   │   │       ├───subresource-integrity
+│   │   │   │       ├───webidl
+│   │   │   │       └───websocket
+│   │   │   │           └───stream
+│   │   │   ├───scripts
+│   │   │   └───types
+│   │   ├───undici-types
+│   │   ├───universalify
+│   │   ├───unpipe
+│   │   ├───uuid
+│   │   │   └───dist
+│   │   │       ├───cjs
+│   │   │       ├───cjs-browser
+│   │   │       ├───esm
+│   │   │       │   └───bin
+│   │   │       └───esm-browser
+│   │   ├───validator
+│   │   │   ├───es
+│   │   │   │   └───lib
+│   │   │   │       └───util
+│   │   │   └───lib
+│   │   │       └───util
+│   │   ├───vary
+│   │   ├───web-worker
+│   │   │   ├───dist
+│   │   │   │   ├───browser
+│   │   │   │   └───node
+│   │   │   ├───src
+│   │   │   │   ├───browser
+│   │   │   │   └───node
+│   │   │   └───types
+│   │   ├───which
+│   │   │   └───bin
+│   │   ├───wkx
+│   │   │   ├───dist
+│   │   │   └───lib
+│   │   ├───wrappy
+│   │   ├───xtend
+│   │   ├───youtube-dl-exec
+│   │   │   ├───bin
+│   │   │   ├───scripts
+│   │   │   └───src
+│   │   └───ytdl-core
+│   │       ├───lib
+│   │       └───typings
+│   ├───routes
+│   ├───services
+│   ├───utils
+│   └───workers
+└───uploads
+PS C:\Users\acer\Desktop\https-github.com-Kantab-Richard-social> 
+
+
+
+npx tsx server/seedAdmin.ts admin User Added Successfully
+Account Created:
+
+Email: kantabbrichard@gmail.com
+Password: Admin123!
+Name: kantab Richard
+Role: admin
